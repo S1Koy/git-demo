@@ -9,5 +9,9 @@ public class Feature1 {
     private void feature01() {
 
     }
+    private void feature02() {
+
+    }
+
 }
 
