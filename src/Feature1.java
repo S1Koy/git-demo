@@ -7,7 +7,7 @@ public class Feature1 {
         System.out.println("Hello");
     }
     private void feature01() {
-
+        System.out.println("feature");
     }
 }
 
