@@ -9,5 +9,9 @@ public class Feature1 {
     private void feature01() {
         System.out.println("feature");
     }
+    private void feature02() {
+        System.out.println("feature02");
+    }
+
 }
 
