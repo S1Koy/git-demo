@@ -1,0 +1,95 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+
+
+             The Honeynet Project   
+             http://project.honeynet.org
+
+
+Included in this package are three sources of data.  These
+were the sources of data used for analysis by the Honeynet Project.  
+We have attempted best as possible to record every probe, attack and 
+exploit over an eleven month period, while minimizing data pollution.
+
+
+The Data:
+- - ---------
+
+ alert.uniq - The firewall logs, contains 11 months of data
+ hacked.txt - Documentation on what and when Honeynet systems were 
+              compromised
+ snort      - Directory contain 11 months of snort alerts
+
+
+
+1. alert.uniq
+- - -------------
+This single ASCII text file was used by the Honeynet firewall
+to log every unqiue inbound scan or probe.  Everytime a source
+IP address sent inbound packets into the Honeynet, the first inbound 
+packet within a 24 hour period was logged to the file alert.uniq.  If a 
+system sent one packet or 10,000 within 24 hours, only the first
+packet was logged.  The purpose of this log file is for trend 
+analysis, to see what systems are scanning what services and when.  This 
+data will not tell us everything about the blackhat community, but it 
+does give us a unique perspective.  
+
+Data from April, 2000 to February, 2001 was collected.  Note, there
+are some periods when the firewall was not logging inbound scans, 
+specifically the month of July, 2000.  Also, starting in Nov 2000, 
+NetBios Scans were no longer logged.  The majority of source IPs 
+are stored using the systems fully qualified domain name.  The Honeynet 
+Project no longer archives data in this format, instead we only archive 
+data using the systems IP address.  Remeber, this data came from a Honeynet, 
+all inbound traffic is both captured and suspect by nature.  This helps 
+reduce both false positives and false negatives.  For more information 
+on this data collected, please refer to the following: 
+
+ Firewall log data capture - http://www.enteract.com/~lspitz/intrusion.html
+ Honeynet data capture     - http://project.honeynet.org/papers/honeynet/
+
+
+2.  hacked.txt
+- - --------------
+This file documents what systems where compromised when.  Not
+every single compromise is documented, we believe there are
+one to three undocumented compromises (we detected and captured
+the comprises, they just were not documented).  Also, once a system
+was compromsied, it was usually left online for one to three
+weeks for continued monitoring.  Last, there are several time
+periods where there was no active honeypot online.
+
+This file documents systems compromised between April and December
+of 2000.  This file does not document systems compromised for January
+and February of 2001.
+
+
+3. Snort
+- - --------
+This directory contains eleven ASCII text files.  Each file represents the 
+snort alerts for the respective month.  This gives us more data on what the
+blackhat community is doing.  This was the data set used for Early Warning
+and Prediction testing.  Keep in mind, the Honeynet has no production 
+systems, so all activity is suspect by nature.  This helps reduce false 
+positives.  For more information on Snort and how it was used for data 
+capture, please refer to the following:
+
+ Snort                 - http://www.snort.org
+ Honeynet data capture - http://project.honeynet.org/papers/honeynet/
+
+
+
+                 The Honeynet Project
+                 <project@honeynet.org>
+
+
+
+
+-----BEGIN PGP SIGNATURE-----
+Version: PGP 6.5.8
+
+iQA/AwUBO1uaO7nbVq6mj+JXEQJ77QCgu21PK6Bp0wNvzMbSkI/hEjhRoHUAoLoh
+EGdJkIoX3sBcp7OO4PLXncdg
+=IeLY
+-----END PGP SIGNATURE-----
